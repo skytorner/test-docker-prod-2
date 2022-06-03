@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build: 
+      dockerfile: Dockerfile
+    container_name: php_container_apache
+    volumes:
+      - ./src:/var/www/html/
+    environment:
+      - DB_HOST=host.docker.internal
+      - DB_PORT=3306
+      - DB_USERNAME=root
+      - DB_DATABASE=tunesetup
+      - DB_PASSWORD=root123
+    ports:
+      - 8000:80
