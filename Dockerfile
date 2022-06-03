@@ -2,8 +2,8 @@ FROM php:8.1-apache
 
 RUN apt-get update && apt-get upgrade -y
 
-COPY ./src /usr/src/myapp
-WORKDIR /usr/src/myapp
+COPY ./src /var/www/html/
+WORKDIR /var/www/html/
 
 ENV APACHE_DOCUMENT_ROOT=/var/www/html
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
