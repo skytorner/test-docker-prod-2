@@ -13,4 +13,4 @@ services:
       - DB_DATABASE=tunesetup
       - DB_PASSWORD=root123
     ports:
-      - 8000:80
+      - 80:80
