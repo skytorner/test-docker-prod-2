@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: 
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     container_name: php_container_apache
     volumes:
       - ./src:/var/www/html/
